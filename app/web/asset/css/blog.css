@@ -1,0 +1,94 @@
+/*!
+ * Bootstrap v3.3.2 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: "PingFang SC", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+  /*line-height: 1.7;*/
+  font-size: 14px;
+  color: #404040;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+h1 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h4 {
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+a {
+  color: #404040;
+  text-decoration: none;
+}
+
+a img:hover,
+a img:focus {
+  cursor: zoom-in;
+}
+
+article {
+  overflow-x: hidden;
+}
+
+blockquote {
+  color: #808080;
+  font-style: italic;
+  font-size: 0.95em;
+  margin: 20px 0 20px;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+hr.small {
+  max-width: 100px;
+  margin: 15px auto;
+  border-width: 4px;
+  border-color: white;
+}
+
+hr.large {
+  max-width: 280px;
+  margin: 15px auto;
+  border-width: 4px;
+  border-color: white;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}

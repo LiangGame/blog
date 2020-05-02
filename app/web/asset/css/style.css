@@ -1,0 +1,28 @@
+@keyframes fade-in {
+  /*初始状态 透明度为0*/
+  0% {
+    opacity: 0;
+    right: -100vw;
+  }
+  /*过渡状态 透明度为0.6*/
+  /*40% {*/
+  /*  opacity: 0.6;*/
+  /*  right: -60vw;*/
+  /*}*/
+  /*结束状态 透明度为1*/
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+#app {
+  width: 100vw;
+  position: absolute;
+  animation: fade-in forwards; /*动画名称*/
+  animation-duration: .3s; /*动画持续时间*/
+}
+
+a:focus {
+  outline: none;
+}
