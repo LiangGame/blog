@@ -9,6 +9,7 @@ yarn-error.log
 package-lock.json
 LICENSE
 config/config.*.js
+config/plugin.js
 config/plugin.*.js
 config/manifest.json
 app/*.js
