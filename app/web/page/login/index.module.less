@@ -1,0 +1,54 @@
+@import '~@/asset/css/mixin';
+
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  .filter-mask {
+    background: url("http://q9o1c3w1a.bkt.clouddn.com/background/bg-05.jpg") no-repeat center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(4px);
+  }
+
+  .login-form-wrap {
+    background: rgba(255, 255, 255, .8);
+    width: 464px;
+    padding: 40px 32px 16px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -65%);
+    border-radius: 4px;
+    box-shadow: 0 0 10px @shadow-color;
+
+    .login-form-button {
+      width: 100%;
+    }
+
+    .login-from-actions {
+      :global {
+        .ant-form-item-control-input-content {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    .login-form-register {
+      float: right;
+      margin: 8px .5em 0 0;
+    }
+
+    :global {
+      .ant-input {
+
+      }
+    }
+  }
+}

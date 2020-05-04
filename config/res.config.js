@@ -5,6 +5,7 @@ const path = require('path');
 const resolve = (filepath) => path.resolve(__dirname, filepath);
 module.exports = {
   entry: {
+    login: 'app/web/page/login/index.tsx',
     home: 'app/web/page/home/index.tsx',
     blog: 'app/web/page/blog/index.tsx',
     'demo/node': 'app/web/page/demo/node.tsx',
