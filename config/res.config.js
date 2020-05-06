@@ -35,7 +35,16 @@ module.exports = {
     ],
   },
   plugins: [
-    { imagemini: false },
+    {
+      imagemini: false,
+    },
+    {
+      define: {
+        'process.env': {
+          SECRET_KEY: JSON.stringify('q&JiY4pQ8Y1M47Dy31biT5RDLqc@PuM4'),
+        },
+      },
+    },
   ],
   alias: {
     '@': 'app/web',

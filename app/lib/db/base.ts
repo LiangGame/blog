@@ -17,6 +17,10 @@ export default class DB {
     return shortid.generate();
   }
 
+  public encryptPwd() {
+    return
+  }
+
   public get(collectionName: string) {
     return null;
   }

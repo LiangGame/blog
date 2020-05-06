@@ -2,6 +2,7 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
+import ExportApi from '../../../app/controller/api';
 import ExportBlog from '../../../app/controller/blog';
 import ExportDemo from '../../../app/controller/demo';
 import ExportHome from '../../../app/controller/home';
@@ -9,6 +10,7 @@ import ExportLogin from '../../../app/controller/login';
 
 declare module 'egg' {
   interface IController {
+    api: ExportApi;
     blog: ExportBlog;
     demo: ExportDemo;
     home: ExportHome;

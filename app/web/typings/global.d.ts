@@ -10,6 +10,7 @@ declare var EASY_ENV_IS_DEV: boolean;
 declare var EASY_ENV_IS_BROWSER: boolean;
 declare var process: {
   env: {
+    SECRET_KEY: string;
     NODE_ENV: string
   }
 };

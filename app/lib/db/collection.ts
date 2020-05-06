@@ -14,6 +14,7 @@ export default class Collection {
   }
 
   public query(json: any) {
+    // console.log(this.name);
     return this.db.query(this.name, json);
   }
 

@@ -6,10 +6,12 @@ import { hot } from 'react-hot-loader/root';
 import Layout from '@/component/layout';
 import { Form, Input, Button, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import axios from '@/framework/request';
 
 const Login: React.FC = props => {
   const onFinish = values => {
     console.log('Received values of form: ', values);
+    axios.post('/api/user/login', values);
   };
 
   return (
@@ -24,7 +26,7 @@ const Login: React.FC = props => {
             onFinish={onFinish}
           >
             <Form.Item
-              name="username"
+              name="phoneNumber"
               rules={[{ required: true, message: '请输入你的手机号!' }]}
             >
               <Input size="large" prefix={<UserOutlined className="site-form-item-icon" />} placeholder="用户名" />
