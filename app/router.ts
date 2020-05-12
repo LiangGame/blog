@@ -12,8 +12,7 @@ export default (app: Application) => {
   router.get('/', controller.home.index);
   router.get('/blog', controller.blog.home);
   router.get('/login', controller.login.index);
-  // @ts-ignore
-  router.post('/login', app.passport.authenticate('local', { successRedirect: '/' }));
+  router.get('/register', controller.register.index);
   // api
   router.resources('restful', '/api/:controller/:action', controller.api);
 };

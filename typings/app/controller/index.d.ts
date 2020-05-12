@@ -7,6 +7,7 @@ import ExportBlog from '../../../app/controller/blog';
 import ExportDemo from '../../../app/controller/demo';
 import ExportHome from '../../../app/controller/home';
 import ExportLogin from '../../../app/controller/login';
+import ExportRegister from '../../../app/controller/register';
 
 declare module 'egg' {
   interface IController {
@@ -15,5 +16,6 @@ declare module 'egg' {
     demo: ExportDemo;
     home: ExportHome;
     login: ExportLogin;
+    register: ExportRegister;
   }
 }

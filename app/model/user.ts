@@ -8,6 +8,8 @@ export default class User extends Model {
   public phoneNumber?: string;
   @JsonProperty('password')
   public password?: string;
+  @JsonProperty('saltKey')
+  public saltKey?: string;
 
   // constructor must be init everyone JsonProperty
   constructor() {

@@ -5,6 +5,8 @@ import User from '../model/user';
 import Article from '../model/article';
 import Condition from '../lib/condition';
 
+const { MD5 } = require('crypto-js');
+
 export default class LoginService extends Service {
   private context: Context;
 
@@ -19,13 +21,12 @@ export default class LoginService extends Service {
   public async login(data: Record<string, string>) {
     const { phoneNumber, password, remember } = data;
     const user = await this.colllection.query({ phoneNumber });
+    const encryptPassword = MD5(password + phoneNumber + user.saltKey).toString();
 
     if (!user) {
-      this.ctx.status = 300;
-      return { success: false, message: '账号不存在' };
-    } else if (user.password !== password) {
-      this.ctx.status = 300;
-      return { success: false, message: '密码错误' };
+      return { code: 300, success: false, message: '账号不存在' };
+    } else if (user.password !== encryptPassword) {
+      return { code: 300, success: false, message: '密码错误' };
     }
     // 选择记住密码存储cookie十天
     if (remember) {
@@ -37,10 +38,15 @@ export default class LoginService extends Service {
       });
     }
     this.ctx.status = 201;
-    return { data: user };
+    const result = Object.assign({}, user);
+    result.id = result.id.toString();
+    delete result.password;
+    delete result.saltKey;
+
+    return { data: result };
   }
 
-  public async register(data: object) {
+  public async register(data: Record<string, any>) {
     const userRule = {
       phoneNumber: {
         type: 'string',
@@ -57,17 +63,18 @@ export default class LoginService extends Service {
     const user: User = deserialize(User, data);
 
     try {
-      const res = await this.colllection.query(data);
+      const res = await this.colllection.query({ phoneNumber: data.phoneNumber });
       if (res) {
-        this.ctx.status = 300;
-        return { success: false, message: '账号已存在' };
+        return { code: 300, success: false, message: '账号已存在' };
       }
     } catch (e) {
       this.ctx.throw(500, 'remote response error', { message: e.message });
     }
 
     try {
-      user.id = this.context.db.getUniqueId();
+      user.id = this.context.db.getUniqueId().toString();
+      user.saltKey = Math.random().toString(32).substr(2); // 密码加盐
+      user.password = MD5(user.password + user.phoneNumber + user.saltKey).toString();
       await this.colllection.add(user);
     } catch (e) {
       this.ctx.throw(500, 'remote response error', { message: e.message });

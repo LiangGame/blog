@@ -1,6 +1,6 @@
 'use strict';
 import axios from 'axios';
-// import Qs from 'qs';
+import { message } from 'antd';
 import Cryptojs from 'crypto-js';
 // axios.defaults.baseURL = 'http://127.0.0.1:7001';
 axios.defaults.timeout = 15000;
@@ -30,6 +30,11 @@ instance.interceptors.request.use((config) => {
 // 添加一个响应拦截器
 instance.interceptors.response.use((response) => {
   // Do something with response data
+  const { code, message: msg } = response.data;
+  if (code !== 201) {
+    message.destroy();
+    message.warn(msg);
+  }
   return response;
 }, (error) => {
   // Do something with response error

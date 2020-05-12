@@ -8,10 +8,10 @@ import { Form, Input, Button, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import axios from '@/framework/request';
 
-const Login: React.FC = props => {
+const Register: React.FC = props => {
   const onFinish = values => {
     console.log('Received values of form: ', values);
-    axios.post('/api/user/login', values);
+    axios.post('/api/user/register', values);
   };
 
   return (
@@ -42,21 +42,12 @@ const Login: React.FC = props => {
                 placeholder="密码"
               />
             </Form.Item>
-            <Form.Item className={styles['login-from-actions']}>
-              <Form.Item name="remember" valuePropName="checked" noStyle>
-                <Checkbox>记住密码</Checkbox>
-              </Form.Item>
-
-              <a rel="nofollow" href="">
-                忘记密码？
-              </a>
-            </Form.Item>
 
             <Form.Item>
               <Button size="large" type="primary" htmlType="submit" className={styles['login-form-button']}>
-                登 录
+                注册
               </Button>
-              <a href="/register" rel="nofollow" className={styles['login-form-register']}>现在去注册</a>
+              <a href="/login" rel="nofollow" className={styles['login-form-register']}>现在去登录</a>
             </Form.Item>
           </Form>
         </div>
@@ -65,6 +56,6 @@ const Login: React.FC = props => {
   );
 };
 
-Login.propTypes = {};
+Register.propTypes = {};
 
-export default EASY_ENV_IS_DEV ? SSR(hot(Login)) : SSR(Login);
+export default EASY_ENV_IS_DEV ? SSR(hot(Register)) : SSR(Register);
