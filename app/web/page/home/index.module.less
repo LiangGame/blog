@@ -119,7 +119,7 @@
       }
 
       .tags-cloud {
-        height: calc(~'100% - 51px');
+        height: calc(~'100% - 60px');
       }
     }
   }
@@ -140,7 +140,7 @@
 }
 
 .anim-content {
-  height: 100vh;
+  //height: 100vh;
 
   .anim-head {
     color: transparent;
@@ -162,13 +162,134 @@
 .anim-component-content, .javascript-component-content {
   //width: 1200px;
   width: 100%;
-  height: calc(~'100vh - 96px');
+  //height: calc(~'100vh - 96px');
   margin: 0 auto;
-  background: @bg-color-m7;
+  //background: @bg-color-m7;
 }
 
-.javascript-content {
+.anim-component-content {
+  display: flex;
+  flex-wrap: wrap;
 
+  .anim-component-item {
+    width: calc(~'50% - 16px');
+    border-radius: 8px;
+    box-shadow: 0 10px 16px rgba(0, 0, 0, .15);
+    margin: 40px 32px 0 0;
+    overflow: hidden;
+    transition: all .5s ease;
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+
+    &:nth-child(-n+2) {
+      margin-top: 0;
+    }
+
+    &:hover {
+      transform: translateY(-16px);
+    }
+
+    .anim-component-cover {
+      height: 264px;
+    }
+
+    .anim-content {
+      padding: 40px 40px 64px;
+      text-align: center;
+
+      .anim-name {
+        color: #666;
+        font-size: 20px;
+        font-weight: 400;
+      }
+
+      .anim-desc {
+        color: #999;
+      }
+    }
+  }
+}
+
+.javascript-container {
+  width: 1200px;
+  margin: 0 auto 64px;
+
+  h2 {
+    text-align: center;
+    margin: 32px 0;
+  }
+
+  .javascript-component-content {
+    display: flex;
+    overflow: hidden;
+
+    .javascript-promote {
+      width: 55%;
+      flex-shrink: 0;
+      margin-right: 32px;
+    }
+
+    .javascript-promote, .javascript-item {
+      position: relative;
+      box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+      border-radius: 8px;
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(transparent 60%, rgba(0, 0, 0, .8));
+      }
+
+      &:hover {
+        .javascript-basic-info {
+          bottom: 0;
+        }
+      }
+
+      .javascript-basic-info {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -65px;
+        z-index: 100;
+        color: #fff;
+        box-sizing: border-box;
+        padding: 24px 48px;
+        transition: all .5s ease;
+
+        .javascript-name {
+          color: inherit;
+          font-weight: 500;
+          font-size: 20px;
+        }
+
+        .javascript-desc {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .javascript-content {
+      flex-shrink: 0;
+
+      .javascript-item {
+        height: calc(~'50% - 16px');
+        margin-bottom: 32px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+    }
+  }
 }
 
 .blog-content {

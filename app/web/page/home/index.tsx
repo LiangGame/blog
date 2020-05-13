@@ -262,16 +262,77 @@ const Home: React.FC<any> = (props) => {
             <h2 className={styles['anim-head']}>
               <Texty>动效 Animation</Texty>
             </h2>
-            <div className={styles['anim-component-content']} />
-          </section>
-          <section className={`${styles['section-content']} ${styles['javascript-content']}`}>
-            <h2 className={styles['javascript-head']}>
-              组件
-            </h2>
-            <div className={styles['javascript-component-content']} />
+            <div className={styles['anim-component-content']} >
+              <div className={styles['anim-component-item']}>
+                <div className={styles['anim-component-cover']}>
+                  <img src={getQiNiuImgUrl('/backgroung/bg-03.jpg', 432, 264, 80, false)} alt="" />
+                </div>
+                <div className={styles['anim-content']}>
+                  <h3 className={styles['anim-name']}>联动效果</h3>
+                  <p className={styles['anim-desc']}>鼠标经过一点的联动效果</p>
+                </div>
+              </div>
+              <div className={styles['anim-component-item']}>
+                <div className={styles['anim-component-cover']}>
+                  <img src={getQiNiuImgUrl('/backgroung/bg-03.jpg', 432, 264, 80, false)} alt="" />
+                </div>
+                <div className={styles['anim-content']}>
+                  <h3 className={styles['anim-name']}>联动效果</h3>
+                  <p className={styles['anim-desc']}>鼠标经过一点的联动效果</p>
+                </div>
+              </div>
+              <div className={styles['anim-component-item']}>
+                <div className={styles['anim-component-cover']}>
+                  <img src={getQiNiuImgUrl('/backgroung/bg-03.jpg', 432, 264, 80, false)} alt="" />
+                </div>
+                <div className={styles['anim-content']}>
+                  <h3 className={styles['anim-name']}>联动效果</h3>
+                  <p className={styles['anim-desc']}>鼠标经过一点的联动效果</p>
+                </div>
+              </div>
+              <div className={styles['anim-component-item']}>
+                <div className={styles['anim-component-cover']}>
+                  <img src={getQiNiuImgUrl('/backgroung/bg-03.jpg', 432, 264, 80, false)} alt="" />
+                </div>
+                <div className={styles['anim-content']}>
+                  <h3 className={styles['anim-name']}>联动效果</h3>
+                  <p className={styles['anim-desc']}>鼠标经过一点的联动效果</p>
+                </div>
+              </div>
+            </div>
           </section>
         </main>
       </div>
+      <section className={`${styles['section-content']} ${styles['javascript-container']}`}>
+        <h2 className={styles['javascript-head']}>
+          组件
+        </h2>
+        <div className={styles['javascript-component-content']}>
+          <div className={styles['javascript-promote']}>
+            <img src={getQiNiuImgUrl('/background/bg-06.jpg', 660, 504, 80, false)} alt="" />
+            <div className={styles['javascript-basic-info']}>
+              <h3 className={styles['javascript-name']}>Kitchen「设计资产」重磅更新！</h3>
+              <div className={styles['javascript-desc']}>作为 Ant Design 的好伙伴，Kitchen 已第一时间上架 Ant Design 4.0 最新 Sketch 组件包。</div>
+            </div>
+          </div>
+          <div className={styles['javascript-content']}>
+            <div className={styles['javascript-item']}>
+              <img src={getQiNiuImgUrl('/background/bg-06.jpg', 432, 236, 80, false)} alt="" />
+              <div className={styles['javascript-basic-info']}>
+                <h3 className={styles['javascript-name']}>Kitchen「设计资产」重磅更新！</h3>
+                <div className={styles['javascript-desc']}>作为 Ant Design 的好伙伴，Kitchen 已第一时间上架 Ant Design 4.0 最新 Sketch 组件包。</div>
+              </div>
+            </div>
+            <div className={styles['javascript-item']}>
+              <img src={getQiNiuImgUrl('/background/bg-06.jpg', 432, 236, 80, false)} alt="" />
+              <div className={styles['javascript-basic-info']}>
+                <h3 className={styles['javascript-name']}>Kitchen「设计资产」重磅更新！</h3>
+                <div className={styles['javascript-desc']}>作为 Ant Design 的好伙伴，Kitchen 已第一时间上架 Ant Design 4.0 最新 Sketch 组件包。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <Footer />
     </Layout>
   );
