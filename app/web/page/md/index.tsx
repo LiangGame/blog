@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './index.module.less';
-import Editor, { MdEditor } from 'for-editor';
+import Editor from 'for-editor';
 import { CSR } from '@/framework/app';
 import { hot } from 'react-hot-loader/root';
 import { Input, Button } from 'antd';
@@ -16,7 +16,7 @@ interface MdProps {
   scene: Scene;
 }
 const Md: React.FC<MdProps> = props => {
-  const $vm = useRef<MdEditor>();
+  const $vm = useRef<any>();
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('![alt](http://q9o1c3w1a.bkt.clouddn.com/backgroung/bg-03.jpg)');
   const { phoneNumber, scene, blogId, blogTitle, blogContent } = props;

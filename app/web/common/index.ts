@@ -10,6 +10,7 @@ export function debounce(func: Function, wait: number, immediate = false): () =>
   let timeout;
 
   return function () {
+    // @ts-ignore
     const context = this;
     const args = arguments;
 
@@ -36,6 +37,7 @@ export function debounce(func: Function, wait: number, immediate = false): () =>
 export function throttle(func: Function, wait: number) {
   let timeout;
   return function () {
+    // @ts-ignore
     const context = this;
     const args = arguments;
     if (!timeout) {

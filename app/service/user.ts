@@ -3,7 +3,7 @@ import { deserialize } from '@hubcarl/json-typescript-mapper';
 import Colllection from '../lib/db/collection';
 import User from '../model/user';
 import Article from '../model/article';
-import Condition from '../lib/condition';
+// import Condition from '../lib/condition';
 
 const { MD5 } = require('crypto-js');
 
