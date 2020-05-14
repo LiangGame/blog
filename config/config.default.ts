@@ -25,16 +25,6 @@ export default function (app: EggAppConfig) {
     expiresIn: 60 * 60 * 2, // 2小时过期
   };
 
-  exports.passport = {
-    key: '12345',
-    secret: '54321',
-  };
-
-  exports.passportLocal = {
-    usernameField: 'phoneNumber',
-    passwordField: 'password',
-  };
-
   exports.mysql = {
     client: {
       host: 'localhost',
@@ -49,6 +39,16 @@ export default function (app: EggAppConfig) {
 
   exports.SECRET_KEY = 'q&JiY4pQ8Y1M47Dy31biT5RDLqc@PuM4';
 
+  // exports.notfound = {
+  //   pageUrl: '/',
+  // };
+
+  // exports.onerror = {
+  //   errorPageUrl: (err, ctx) => {
+  //     console.log(err, ctx);
+  //     // ctx.errorPageUrl || '/';
+  //   },
+  // };
 
   return exports;
 }

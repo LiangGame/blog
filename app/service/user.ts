@@ -30,9 +30,9 @@ export default class LoginService extends Service {
     }
     // 选择记住密码存储cookie十天
     if (remember) {
-      this.ctx.cookies.set('user', user.id, {
+      this.ctx.cookies.set('user', user.phoneNumber, {
         maxAge: 1000 * 3600 * 24 * 10, // cookie存储一天 设置过期时间后关闭浏览器重新打开cookie还存在
-        httpOnly: true, // 仅允许服务获取,不允许js获取
+        httpOnly: false, // 仅允许服务获取,不允许js获取
         signed: true, // 对cookie进行签名 防止用户修改cookie
         encrypt: true, // 是否对cookie进行加密 如果cookie加密那么获取的时候要对cookie进行解密
       });

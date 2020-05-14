@@ -13,6 +13,8 @@ export default (app: Application) => {
   router.get('/blog', controller.blog.home);
   router.get('/login', controller.login.index);
   router.get('/register', controller.register.index);
+  router.get('/md', controller.md.index);
+  router.get('/md/:id', controller.md.index);
   // api
   router.resources('restful', '/api/:controller/:action', controller.api);
 };

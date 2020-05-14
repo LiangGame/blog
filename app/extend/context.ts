@@ -1,14 +1,15 @@
 'use strict';
-import { Context } from 'egg';
+// import { Context } from 'egg';
 import DB from '../lib/db/base';
 import Cryptojs from 'crypto-js';
 import jwt from 'jsonwebtoken';
 
 export default {
-  get db(this: Context): DB {
+  get db(): DB {
+    // @ts-ignore
     return this.app.db;
   },
-  get jwt() {
+  get Jwt() {
     return jwt;
   },
   crypto(value) {

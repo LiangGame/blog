@@ -7,6 +7,7 @@ import ExportBlog from '../../../app/controller/blog';
 import ExportDemo from '../../../app/controller/demo';
 import ExportHome from '../../../app/controller/home';
 import ExportLogin from '../../../app/controller/login';
+import ExportMd from '../../../app/controller/md';
 import ExportRegister from '../../../app/controller/register';
 
 declare module 'egg' {
@@ -16,6 +17,7 @@ declare module 'egg' {
     demo: ExportDemo;
     home: ExportHome;
     login: ExportLogin;
+    md: ExportMd;
     register: ExportRegister;
   }
 }

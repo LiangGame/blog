@@ -9,6 +9,7 @@ module.exports = {
     register: 'app/web/page/register/index.tsx',
     home: 'app/web/page/home/index.tsx',
     blog: 'app/web/page/blog/index.tsx',
+    md: 'app/web/page/md/index.tsx',
     'demo/node': 'app/web/page/demo/node.tsx',
     'demo/async': 'app/web/page/demo/async.tsx',
   },

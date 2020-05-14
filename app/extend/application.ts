@@ -4,7 +4,7 @@ import DBFactory from '../lib/db/factory';
 
 // const DBSymbol = Symbol('Application#db');
 export default {
-  get db(this: Application): DB {
+  get db(): DB {
     // if (!this[DBSymbol]) {
     //   this[DBSymbol] = DBFactory();
     // }
